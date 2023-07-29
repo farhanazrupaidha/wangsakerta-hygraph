@@ -1,24 +1,16 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Head from "next/head";
+import Layout from "../components/layout";
+import * as React from 'react';
 
-import Hero from "../components/hero";
-import SiapaKami from "../components/siapakami";
-import StrategiPencapaian from "../components/strategipencapaian";
-import Ngenger from "../components/ngengerhero";
-import Galeri from "../components/galeri";
+import VideoSlide from '/components/videoslide';
 
-export default function Index({ posts, preview }) {
-  const heroPost = posts[0]
-  const morePosts = posts.slice(0)
-  return (
-    <>
-      <Layout preview={preview}>
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+
+export default function NgengerSA () {
+return (
+<Layout>
                <Head
                      defaultTitle="Yayasan Wangsakerta"
                    >
@@ -39,22 +31,8 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/Wangsakerta - 2.jpg" />
                     <link rel="icon" href="/favicon/logo-wangsakerta.png" />
                </Head>
-        <Hero />
-        <SiapaKami />
-        <StrategiPencapaian />
-        <Ngenger />
-        <Galeri />
-        <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
-}
-
-export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
-  return {
-    props: { posts, preview },
-  }
+     <Typography variant="h4" sx={{textAlign: 'center', mb:2, mt:5}}> <AccessibilityNewIcon sx={{mr:1, mb:1}} />Ngenger Sekolah Alam Wangsakerta</Typography>
+    <VideoSlide />
+</Layout>
+)
 }

@@ -3,3 +3,210 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+body {
+  --black: #111111;
+  --white: #fdfdfd;
+  --green: #22cc88;
+  --blue: #0055ff;
+  --purple: #8855ff;
+  --red: #ff0055;
+  --orange: #ee4444;
+  --yellow: #ffcc00;
+  --mustard: #ffaa00;
+
+  --accent: var(--blue);
+
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  prose: #777C88;
+}
+
+.c-share {
+  padding: 1rem;
+
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center; /* [2] */
+}
+
+.d-share {
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center; /* [2] */
+  margin-bottom:10px;
+}
+
+.fix-bottom-button {
+  position: fixed;
+  bottom: 3rem;
+  left: 2rem;
+  right: 2rem;
+  align: right;
+
+  background-image: linear-gradient(90deg, #ffa513, #ff5a1c);
+  box-shadow: 0 0.13333rem 0.4rem 0 rgba(255, 80, 0, 0.4);
+
+  border-radius: 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  height: 3rem;
+  width: 3rem;
+
+  /* 行距，MDN 推荐使用 无单位数字 */
+  /* Unitless values: use this number multiplied
+by the element's font size */
+  line-height: 2;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 8px;
+  background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--green);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embla {
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+  /*---------------------------------------
+      HOME
+  -----------------------------------------*/
+
+  #home {
+    background: url('../public/images/backgroundhero.jpg') no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 60vh;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  /*---------------------------------------
+      SiapaKami
+  -----------------------------------------*/
+
+  #siapa {
+    background: #004d40;  /* fallback for old browsers */
+    position: relative;
+    padding-top: 10px;
+  }
+
+  /*---------------------------------------
+      Strategi
+  -----------------------------------------*/
+
+  #strategi {
+    background: #004d40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004d40, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004d40 , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    padding-top: 10px;
+    min-height: 50vh;
+  }
+
+  /*---------------------------------------
+      Ngenger
+  -----------------------------------------*/
+
+  #ngenger {
+    background: #004d40;  /* fallback for old browsers */
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  /*---------------------------------------
+      Galeri
+  -----------------------------------------*/
+
+  #galeri {
+    background: #00695c;  /* fallback for old browsers */
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  /*---------------------------------------
+      Kontak
+  -----------------------------------------*/
+
+  #kontak {
+    background: #004d40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004d40, #a7ffeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004d40 , #a7ffeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    min-height: 20vh;
+  }

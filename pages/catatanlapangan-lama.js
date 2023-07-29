@@ -1,24 +1,18 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
+// pages/index.js
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Link from 'next/link'
 
-import Hero from "../components/hero";
-import SiapaKami from "../components/siapakami";
-import StrategiPencapaian from "../components/strategipencapaian";
-import Ngenger from "../components/ngengerhero";
-import Galeri from "../components/galeri";
+import Layout from '/components/layout'
+import postStyles from '/components/post-styles.module.css'
 
-export default function Index({ posts, preview }) {
-  const heroPost = posts[0]
-  const morePosts = posts.slice(0)
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
+export default function Home(props, slug) {
+  const posts = props.posts;
   return (
-    <>
-      <Layout preview={preview}>
+  <Layout>
+    <div style={{ padding: 30 }}>
                <Head
                      defaultTitle="Yayasan Wangsakerta"
                    >
@@ -39,22 +33,45 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/Wangsakerta - 2.jpg" />
                     <link rel="icon" href="/favicon/logo-wangsakerta.png" />
                </Head>
-        <Hero />
-        <SiapaKami />
-        <StrategiPencapaian />
-        <Ngenger />
-        <Galeri />
-        <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
+      <div>
+        {posts.map(post =>
+          <div
+            key={post.id}
+            style={{ padding: 20, borderBottom: '1px solid #ccc' }}>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-5 text-center md:text-left">
+             <Link href={`/wp-articles/${slug}`} className="hover:underline">
+                {post.title}
+            </Link>
+            </h3>
+            <Box
+                    style={{
+                        paddingBottom: "0%",
+                        maxHeight: "800px",
+                        overflow: "auto"
+                    }}
+            >
+            <div
+              className={`max-w-4xl mx-auto post ${postStyles.post}`}
+              dangerouslySetInnerHTML={{__html:[post.content] }}
+            />
+            </Box>
+          </div>
+        )}
+      </div>
+    </div>
+  </Layout>
   )
 }
 
-export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+// Fetching data from the JSON file
+import fsPromises from 'fs/promises';
+import path from 'path'
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'catatanlama.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
   return {
-    props: { posts, preview },
+    props: objectData
   }
 }

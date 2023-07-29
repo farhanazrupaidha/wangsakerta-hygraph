@@ -1,24 +1,20 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import * as React from 'react';
+import Head from "next/head";
 
-import Hero from "../components/hero";
-import SiapaKami from "../components/siapakami";
-import StrategiPencapaian from "../components/strategipencapaian";
-import Ngenger from "../components/ngengerhero";
-import Galeri from "../components/galeri";
+import Layout from "/components/layout";
+import postStyles from '/components/post-styles.module.css'
 
-export default function Index({ posts, preview }) {
-  const heroPost = posts[0]
-  const morePosts = posts.slice(0)
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
+
+
+
+export default function CatatanLama ({post, slug}) {
   return (
-    <>
-      <Layout preview={preview}>
+    <Layout>
                <Head
                      defaultTitle="Yayasan Wangsakerta"
                    >
@@ -39,22 +35,43 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/Wangsakerta - 2.jpg" />
                     <link rel="icon" href="/favicon/logo-wangsakerta.png" />
                </Head>
-        <Hero />
-        <SiapaKami />
-        <StrategiPencapaian />
-        <Ngenger />
-        <Galeri />
-        <Container>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
+    <Box sx={{m:5}}>
+      <Typography variant="h6" color="#E50808" gutterBottom sx={{fontWeight: 'bold', textAlign: 'left', mb:1}}>
+         {post.title}
+              </Typography>
+        <Box sx={{ whiteSpace: 'nowrap', overflowX: 'auto', }}>
+                 <Typography variant="h4" color="secondary" gutterBottom sx={{fontWeight: 'bold', textAlign: 'left', lineHeight: 1}}>
+                        <a href={`/wp-articles/${slug}`}>
+                            {post.title}
+                        </a>
+                    </Typography>
+                    </Box>
+            <div
+              className={`max-w-4xl mx-auto post ${postStyles.post}`}
+              dangerouslySetInnerHTML={{__html:[post.content] }}
+            />
+  </Box>
+  <Divider sx={{ width: '100%', m:'auto' }}/>
+  <Box sx={{m:5}}>
+  <Button>
+    <Link href='/catatanlapangan-lama'>
+        - Kembali ke Arsip Catatan Lapangan 2017 - 2021
+    </Link>
+  </Button>
+  </Box>
+  </Layout>
+  );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+
+export const getServerSideProps = async ({ params }) => {
+  const postRes = await fetch(
+    `${process.env.API_ROOT}/api/staticdata`
+  );
+  const post = await postRes.json();
   return {
-    props: { posts, preview },
-  }
-}
+    props: {
+      post,
+    },
+  };
+};

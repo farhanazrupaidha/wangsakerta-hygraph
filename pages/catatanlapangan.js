@@ -7,15 +7,12 @@ import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
-import Hero from "../components/hero";
-import SiapaKami from "../components/siapakami";
-import StrategiPencapaian from "../components/strategipencapaian";
-import Ngenger from "../components/ngengerhero";
-import Galeri from "../components/galeri";
+import { Pagination, Typography, Box, Button, Stack } from "@mui/material";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Index({ posts, preview }) {
   const heroPost = posts[0]
-  const morePosts = posts.slice(0)
+  const morePosts = posts.slice(1)
   return (
     <>
       <Layout preview={preview}>
@@ -39,13 +36,20 @@ export default function Index({ posts, preview }) {
                      <meta name="twitter:image:src" content="/images/Wangsakerta - 2.jpg" />
                     <link rel="icon" href="/favicon/logo-wangsakerta.png" />
                </Head>
-        <Hero />
-        <SiapaKami />
-        <StrategiPencapaian />
-        <Ngenger />
-        <Galeri />
         <Container>
+          <Intro />
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/catatanlapangan-lama" color="secondary"  size="large" sx={{borderRadius: 5, mb:10}}>Arsip Catatan 2017 - 2021</Button>
         </Container>
       </Layout>
     </>
