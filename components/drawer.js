@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+whyimport { useState, useEffect } from 'react'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -47,13 +47,6 @@ function DrawerToggle () {
                     <ListItemButton href="/strategi">
                       <ListItemText>
                         Strategi Umum
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton href="/ngenger">
-                      <ListItemText>
-                        Ngenger
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
