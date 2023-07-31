@@ -41,7 +41,7 @@ export default function PostPreview({
             ))}
         </Stack>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture.url} />
+      <Avatar name={author.name} />
     </div>
   )
 }
