@@ -1,5 +1,5 @@
-{
-  "posts":
+
+const Posts =
   [
     {
       "id": "87736948",
@@ -2110,4 +2110,5 @@
       }
     }
   ]
-}
+
+  export default Posts;

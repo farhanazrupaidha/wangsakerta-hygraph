@@ -5,11 +5,12 @@ import Link from 'next/link'
 import Layout from '/components/layout'
 import postStyles from '/components/post-styles.module.css'
 
+import Posts from "../posts";
+
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-export default function Home(props, slug) {
-  const posts = props.posts;
+export default function CatatanLama ({ posts }) {
   return (
   <Layout>
     <div style={{ padding: 30 }}>
@@ -39,7 +40,7 @@ export default function Home(props, slug) {
             key={post.id}
             style={{ padding: 20, borderBottom: '1px solid #ccc' }}>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-5 text-center md:text-left">
-             <Link href={`/wp-articles/${slug}`} className="hover:underline">
+             <Link href={`/wp-articles/${post.slug}`} className="hover:underline">
                 {post.title}
             </Link>
             </h3>
@@ -50,10 +51,6 @@ export default function Home(props, slug) {
                         overflow: "auto"
                     }}
             >
-            <div
-              className={`max-w-4xl mx-auto post ${postStyles.post}`}
-              dangerouslySetInnerHTML={{__html:[post.content] }}
-            />
             </Box>
           </div>
         )}
@@ -63,15 +60,10 @@ export default function Home(props, slug) {
   )
 }
 
-// Fetching data from the JSON file
-import fsPromises from 'fs/promises';
-import path from 'path'
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'catatanlama.json');
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const posts = Posts;
 
   return {
-    props: objectData
-  }
+    props: { posts }
+  };
 }
