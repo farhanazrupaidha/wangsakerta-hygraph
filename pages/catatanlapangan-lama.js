@@ -40,7 +40,7 @@ export default function CatatanLama ({ posts }) {
             key={post.id}
             style={{ padding: 20, borderBottom: '1px solid #ccc' }}>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-5 text-center md:text-left">
-             <Link href={`/wp-articles/${post.slug}`} className="hover:underline">
+             <Link href={`/wparticles/${post.slug}`} className="hover:underline">
                 {post.title}
             </Link>
             </h3>

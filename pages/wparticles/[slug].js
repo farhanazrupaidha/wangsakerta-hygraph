@@ -60,7 +60,7 @@ export default function Post ({ post }) {
               dangerouslySetInnerHTML={{__html:[post.content] }}
             />
   </Box>
-<Box sx={{mt:7}}>
+<Box sx={{mt:7, m:5}}>
         <center>
         <Divider sx={{mt:5, mb:5, maxWidth:300, width:'95%' }} />
         <Typography variant='h5'>Bagikan</Typography>

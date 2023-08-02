@@ -65,13 +65,6 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
-                    <ListItemButton href="/ngenger">
-                      <ListItemText>
-                        Ngenger
-                      </ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
                     <ListItemButton href="https://www.studiofrugreenproject.com" target="_blank">
                       <ListItemText>
                         Jelajah Ensiklopedia

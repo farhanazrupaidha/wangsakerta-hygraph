@@ -3,7 +3,7 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
+import { getAllPostsForHomeIndex } from '../lib/graphcms'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 
@@ -12,6 +12,10 @@ import SiapaKami from "../components/siapakami";
 import StrategiPencapaian from "../components/strategipencapaian";
 import Ngenger from "../components/ngengerhero";
 import Galeri from "../components/galeri";
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Index({ posts, preview }) {
   const heroPost = posts[0]
@@ -46,6 +50,7 @@ export default function Index({ posts, preview }) {
         <Galeri />
         <Container>
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+           <Button variant="contained" endIcon={<ArrowForwardIcon />} href="/catatanlapangan" color="secondary" sx={{borderRadius: 5, mr:1, mb:10}}>Catatan Lapangan selengkapnya</Button>
         </Container>
       </Layout>
     </>
@@ -53,7 +58,7 @@ export default function Index({ posts, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+  const posts = (await getAllPostsForHomeIndex(preview)) || []
   return {
     props: { posts, preview },
   }
