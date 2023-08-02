@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cc4b28a-2833-49b5-9f34-5c22d55d7837" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/more-stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/more-stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/graphcms.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/graphcms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/catatanlapangan-lama.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catatanlapangan-lama.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/wp-articles/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wparticles/[slug].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
