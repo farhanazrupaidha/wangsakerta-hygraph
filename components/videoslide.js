@@ -16,6 +16,36 @@ export default function Galeri () {
 
   return (
  <Box sx={{mb:10, m:5}}>
+
+<Typography variant="h5" sx={{m:5, mb:2}}>Angkatan ke-4</Typography>
+<Splide aria-label="Angkatan ke-1">
+  <SplideSlide>
+    <section className="d-share">
+      <ReactPlayer url='https://youtu.be/Z9bCnI42wpQ?si=bsxSYZd_5m_oEqYr' />
+    </section>
+  </SplideSlide>   
+  <SplideSlide>
+    <section className="d-share">
+      <ReactPlayer url='https://youtu.be/LF1UPqlO93k?si=QMGIX-2EnaH3B-3J' />
+    </section>
+  </SplideSlide>  
+  <SplideSlide>
+    <section className="d-share">
+      <ReactPlayer url='https://youtu.be/0SiSq3hRopA?si=4YyEo85ZQvTL_w_W' />
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <ReactPlayer url='https://youtu.be/crToASadPi8?si=OWn1zwoj8U_6-AI9' />
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <ReactPlayer url='https://youtu.be/mHtUDEfcNsY?si=YsM520UcPjMuKOT_' />
+    </section>
+  </SplideSlide>  
+</Splide>
+
 <Typography variant="h5" sx={{m:5, mb:2}}>Angkatan ke-3</Typography>
 <Splide aria-label="Angkatan ke-1">
   <SplideSlide>
