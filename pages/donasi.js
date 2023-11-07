@@ -61,7 +61,7 @@ const { data, loading, error } = useQuery(DONASI);
                      <meta property="og:description" content={data.page.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project - Tentang" />
                      <meta property="og:image" content={data.page.seo.image.url} />
-                      <meta name="og:url" content={`https://wangsakerta.org/donasi`}/>
+                      <meta name="og:url" content={`https://yayasanwangsakerta.org/donasi`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={data.page.seo.title} />

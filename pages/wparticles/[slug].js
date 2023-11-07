@@ -39,7 +39,7 @@ export default function Post ({ post }) {
                      <meta name="keywords" content="wangsakerta, yayasan wangsakerta, setu patok, konservasi danau setu patok, perkebunan, pertanian" />
                      <meta name="author" content="Yayasan Wangsakerta | https://wangsakerta.org/" />
                      <meta property="image" content="/images/Wangsakerta - 2.jpg" />
-                     <meta property="og:url" content="https://wangsakerta.org/" />
+                     <meta property="og:url" content="https://yayasanwangsakerta.org/" />
                      <meta property="og:title" content="Yayasan Wangsakerta" />
                      <meta property="og:description" content="Mewujudkan masyarakat yang cukup pangan, cukup energi, cukup informasi, dan mampu menentukan diri sendiri." />
                      <meta property="og:site_name" content="Yayasan Wangsakerta" />
@@ -74,7 +74,7 @@ export default function Post ({ post }) {
         >
             <ShareButton />
             <TwitterShareButton
-                url={`https://wangsakerta.org/wp-articles/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/wp-articles/${post.slug}`}
                 title={post.title}
             >
             <IconButton size="small">
@@ -82,7 +82,7 @@ export default function Post ({ post }) {
             </IconButton>
             </TwitterShareButton>
             <FacebookShareButton
-                url={`https://wangsakerta.org/wp-articles/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/wp-articles/${post.slug}`}
                 quote={post.title}
                 hashtag={'#yayasanwangsakerta'}
             >
@@ -91,7 +91,7 @@ export default function Post ({ post }) {
             </IconButton>
             </FacebookShareButton>
             <WhatsappShareButton
-                url={`https://wangsakerta.org/wp-articles/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/wp-articles/${post.slug}`}
                 title={post.title}
                 separator="->"
             >

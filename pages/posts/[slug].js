@@ -67,7 +67,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta property="og:description" content={post.seo.description} />
                      <meta property="og:site_name" content="Studiofru | Green Project" />
                      <meta property="og:image" content={post.seo.image.url} />
-                      <meta name="og:url" content={`https://wangsakerta.org/posts/${post.slug}`}/>
+                      <meta name="og:url" content={`https://yayasanwangsakerta.org/posts/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
                      <meta name="twitter:title" content={post.seo.title} />
@@ -101,7 +101,7 @@ export default function Post({ post, morePosts, preview }) {
         >
             <ShareButton />
             <TwitterShareButton
-                url={`https://wangsakerta.org/posts/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/posts/${post.slug}`}
                 title={post.title}
             >
             <IconButton size="small">
@@ -109,7 +109,7 @@ export default function Post({ post, morePosts, preview }) {
             </IconButton>
             </TwitterShareButton>
             <FacebookShareButton
-                url={`https://wangsakerta.org/posts/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/posts/${post.slug}`}
                 quote={post.title}
                 hashtag={'#yayasanwangsakerta'}
             >
@@ -118,7 +118,7 @@ export default function Post({ post, morePosts, preview }) {
             </IconButton>
             </FacebookShareButton>
             <WhatsappShareButton
-                url={`https://wangsakerta.org/posts/${post.slug}`}
+                url={`https://yayasanwangsakerta.org/posts/${post.slug}`}
                 title={post.title}
                 separator="->"
             >

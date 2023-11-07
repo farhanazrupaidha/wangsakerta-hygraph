@@ -17,9 +17,9 @@ return (
                      <title>Yayasan Wangsakerta</title>
                      <meta name="description" content="Mewujudkan masyarakat yang cukup pangan, cukup energi, cukup informasi, dan mampu menentukan diri sendiri." />
                      <meta name="keywords" content="studiofru, ensiklopedia, ensiklopedia alam, ensiklopedia flora, ensiklopedia fauna, perkebunan, pertanian" />
-                     <meta name="author" content="Yayasan Wangsakerta | https://wangsakerta.org/" />
+                     <meta name="author" content="Yayasan Wangsakerta | https://yayasanwangsakerta.org/" />
                      <meta property="image" content="/images/Wangsakerta - 2.jpg" />
-                     <meta property="og:url" content="https://wangsakerta.org/" />
+                     <meta property="og:url" content="https://yayasanwangsakerta.org/" />
                      <meta property="og:title" content="Yayasan Wangsakerta" />
                      <meta property="og:description" content="Mewujudkan masyarakat yang cukup pangan, cukup energi, cukup informasi, dan mampu menentukan diri sendiri." />
                      <meta property="og:site_name" content="Yayasan Wangsakerta" />
