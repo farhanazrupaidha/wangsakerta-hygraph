@@ -1,11 +1,8 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPostsForHomeIndex } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 
 import Hero from "../components/hero";
 import SiapaKami from "../components/siapakami";

@@ -51,7 +51,7 @@ const { data, loading, error } = useQuery(DONASI);
   return (
 <Layout>
                 <Head
-                     defaultTitle="Studiofru | Green Project"
+                     defaultTitle="Yayasan Wangsakerta"
                    >
                      <title>{data.page.seo.title}</title>
                      <meta name="description" content={data.page.seo.description} />
@@ -59,7 +59,7 @@ const { data, loading, error } = useQuery(DONASI);
                      <meta property="image" content={data.page.seo.image.url} />
                      <meta property="og:title" content={data.page.seo.title} />
                      <meta property="og:description" content={data.page.seo.description} />
-                     <meta property="og:site_name" content="Studiofru | Green Project - Tentang" />
+                     <meta property="og:site_name" content="Yayasan Wangsakerta | Donasi" />
                      <meta property="og:image" content={data.page.seo.image.url} />
                       <meta name="og:url" content={`https://yayasanwangsakerta.org/donasi`}/>
                      <meta name="og:type" content="website" />
