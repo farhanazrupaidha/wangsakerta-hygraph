@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.yayasanwangsakerta.org/
+Host: https://yayasanwangsakerta.org/
 
 # Sitemaps
-Sitemap: https://www.yayasanwangsakerta.org/sitemap.xml
+Sitemap: https://yayasanwangsakerta.org/sitemap.xml
