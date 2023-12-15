@@ -7,8 +7,6 @@ import Layout from '/components/layout'
 import FormulirDonasi from '/components/form-donasi'
 
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 

@@ -1,13 +1,18 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import dynamic from 'next/dynamic'
+import { getAllPostsForHome } from '../lib/graphcms'
 
-import { Pagination, Typography, Box, Button, Stack } from "@mui/material";
+const Container = dynamic(() => import('components/container'));
+const Layout = dynamic(() => import('components/layout'));
+const HeroPost = dynamic(() => import('components/hero-post'));
+const MoreStories = dynamic(() => import('components/more-stories'), {
+  ssr: false,
+});
+const Intro = dynamic(() => import('components/intro'), {
+  ssr: false,
+});
+
+import Button from "@mui/material/Button";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Index({ posts, preview }) {

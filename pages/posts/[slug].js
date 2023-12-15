@@ -1,30 +1,40 @@
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Container from 'components/container'
-import PostBody from 'components/post-body'
-import MoreStories from 'components/more-stories'
-import Header from 'components/header'
-import PostHeader from 'components/post-header'
-import SectionSeparator from 'components/section-separator'
-import Layout from 'components/layout'
-import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
-import PostTitle from 'components/post-title'
-import ShareButton from "components/socialsharebutton";
 import Head from 'next/head'
-import { CMS_NAME } from 'lib/constants'
+import dynamic from 'next/dynamic'
+import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
+
+const ErrorPage = dynamic(() => import('components/errorpage'), {
+  ssr: false,
+});
+const Container = dynamic(() => import('components/container'));
+const PostBody = dynamic(() => import('components/post-body'));
+const MoreStories = dynamic(() => import('components/more-stories'), {
+  ssr: false,
+});
+const Header = dynamic(() => import('components/header'), {
+  ssr: false,
+});
+const PostHeader = dynamic(() => import('components/post-header'));
+const PostTitle = dynamic(() => import('components/post-title'));
+const SectionSeparator = dynamic(() => import('components/section-separator'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'));
+const ShareButton = dynamic(() => import('components/socialsharebutton'), {
+  ssr: false,
+});
+
 
 const { motion,useScroll } = require("framer-motion");
 import { DiscussionEmbed } from 'disqus-react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 

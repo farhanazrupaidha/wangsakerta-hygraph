@@ -12,6 +12,11 @@ export default function CoverImage({ title, url, slug }) {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
       src={url}
+      blurDataURL={url}
+      loading="eager"
+      priority={true}
+      layout="responsive"
+      placeholder='blur'
     />
   )
 

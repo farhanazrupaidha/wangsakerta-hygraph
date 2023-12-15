@@ -5,7 +5,6 @@ import * as React from 'react';
 import VideoSlide from '/components/videoslide';
 
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
 export default function NgengerSA () {

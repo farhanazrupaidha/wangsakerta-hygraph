@@ -4,9 +4,12 @@
 
 .post p,
 .post ul,
-.post ol,
-.post blockquote {
+.post ol {
   @apply my-6;
+}
+
+.post li {
+  @apply list-disc;
 }
 
 .post h1 {
@@ -19,4 +22,28 @@
 
 .post h3 {
   @apply mt-8 mb-4 text-2xl leading-snug;
+}
+
+.post table {
+  @apply table-auto min-w-full text-left text-sm overflow-x-auto border-spacing-0 mb-8;
+}
+
+.post thead {
+  @apply border-b font-medium;
+}
+
+.post tr {
+  @apply border-b h-px;
+}
+
+.post td {
+  @apply whitespace-nowrap h-px;
+}
+
+.post blockquote {
+  @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800 text-xl italic font-medium leading-relaxed;
+}
+
+.post code {
+  @apply text-sm sm:text-base inline-flex text-left items-center space-x-4 rounded-lg p-4 pl-6 bg-gray-50 dark:bg-gray-800 border-gray-300;
 }

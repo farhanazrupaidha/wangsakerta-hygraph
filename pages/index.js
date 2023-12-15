@@ -1,14 +1,28 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import Layout from '../components/layout'
-import { getAllPostsForHomeIndex } from '../lib/graphcms'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+import { getAllPostsForHomeIndex } from '../lib/graphcms'
 
-import Hero from "../components/hero";
-import SiapaKami from "../components/siapakami";
-import StrategiPencapaian from "../components/strategipencapaian";
-import Ngenger from "../components/ngengerhero";
-import Galeri from "../components/galeri";
+const Container = dynamic(() => import('components/container'));
+const MoreStories = dynamic(() => import('components/more-stories'), {
+  ssr: false,
+});
+const Layout = dynamic(() => import('components/layout'));
+
+const Hero = dynamic(() => import('components/hero'), {
+  ssr: false,
+});
+const SiapaKami = dynamic(() => import('components/siapakami'), {
+  ssr: false,
+});
+const StrategiPencapaian = dynamic(() => import('components/strategipencapaian'), {
+  ssr: false,
+});
+const Ngenger = dynamic(() => import('components/ngengerhero'), {
+  ssr: false,
+});
+const Galeri = dynamic(() => import('components/galeri'), {
+  ssr: false,
+});
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
