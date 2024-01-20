@@ -4,6 +4,7 @@ export function getDenormalizedPosts() {
   return Posts.map((post) => {
     return {
       ...post,
+      ...post.slug,
     };
   });
 }

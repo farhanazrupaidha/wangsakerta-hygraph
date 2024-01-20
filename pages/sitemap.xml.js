@@ -5,7 +5,8 @@ const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
   const posts = await getAllPostsWithSlug()  
-  const wparticles = await Posts ()
+  const wparticles = Posts;
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
@@ -58,16 +59,17 @@ export const getServerSideProps = async ({ res }) => {
         <priority>1.0</priority>
     </url>
     `)
-    .join('\n')}   
-    ${wparticles.map(({ post }) => `
-    <url>
-        <loc>https://www.yayasanwangsakerta.org/wparticles/${post.slug}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
+    .join('\n')}    
+    ${wparticles.map( post => `     
+          <url>
+            <loc>https://www.yayasanwangsakerta.org/wparticles/${post.slug}</loc>
+            <lastmod>${new Date().toISOString()}</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>1.0</priority>
+          </url>  
     `)
-    .join('\n')}            
+    .join('\n')} 
+             
 </urlset>
 `;
 
@@ -75,7 +77,7 @@ export const getServerSideProps = async ({ res }) => {
   res.write(sitemap);
   res.end();
 
-  return { props: {} };
+  return { props: { wparticles }} ;
 }
-  
+
 export default Sitemap;
