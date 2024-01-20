@@ -18,7 +18,6 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
@@ -34,7 +33,7 @@ export default function Post ({ post }) {
                <Head
                      defaultTitle="Yayasan Wangsakerta"
                    >
-                     <title>Yayasan Wangsakerta</title>
+                     <title>{post.title}</title>
                      <meta name="description" content="Mewujudkan masyarakat yang cukup pangan, cukup energi, cukup informasi, dan mampu menentukan diri sendiri." />
                      <meta name="keywords" content="wangsakerta, yayasan wangsakerta, setu patok, konservasi danau setu patok, perkebunan, pertanian" />
                      <meta name="author" content="Yayasan Wangsakerta | https://wangsakerta.org/" />
