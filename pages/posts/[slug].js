@@ -73,6 +73,7 @@ export default function Post({ post, morePosts, preview }) {
                      <meta name="description" content={post.excerpt} />
                      <meta name="keywords" content={post.keywords} />
                      <meta property="image" content={post.coverImage.url} />
+                     <meta name="author" content={post.author} /> 
                      <meta property="og:title" content={post.title} />
                      <meta property="og:description" content={post.excerpt} />
                      <meta property="og:site_name" content="Yayasan Wangsakerta" />
