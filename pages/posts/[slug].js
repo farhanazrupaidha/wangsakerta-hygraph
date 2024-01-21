@@ -67,22 +67,22 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
                 <Head
-                     defaultTitle="Studiofru | Green Project"
+                     defaultTitle="Yayasan Wangsakerta"
                    >
-                     <title>{post.seo.title}</title>
-                     <meta name="description" content={post.seo.description} />
-                     <meta name="keywords" content={post.seo.keywords} />
-                     <meta property="image" content={post.seo.image.url} />
+                     <title>{post.title}</title>
+                     <meta name="description" content={post.excerpt} />
+                     <meta name="keywords" content={post.keywords} />
+                     <meta property="image" content={post.coverImage.url} />
                      <meta property="og:title" content={post.title} />
-                     <meta property="og:description" content={post.seo.description} />
-                     <meta property="og:site_name" content="Studiofru | Green Project" />
-                     <meta property="og:image" content={post.seo.image.url} />
+                     <meta property="og:description" content={post.excerpt} />
+                     <meta property="og:site_name" content="Yayasan Wangsakerta" />
+                     <meta property="og:image" content={post.coverImage.url} />
                       <meta name="og:url" content={`https://yayasanwangsakerta.org/posts/${post.slug}`}/>
                      <meta name="og:type" content="website" />
                      <meta name="twitter:site" content="@studiofruworks" />
-                     <meta name="twitter:title" content={post.seo.title} />
+                     <meta name="twitter:title" content={post.title} />
                      <meta name="twitter:card" content="summary_large_image" />
-                     <meta name="twitter:image:src" content={post.seo.image.url} />
+                     <meta name="twitter:image:src" content={post.coverImage.url} />
                 </Head>
               <motion.div
                 className="progress-bar"
