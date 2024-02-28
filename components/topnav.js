@@ -140,13 +140,6 @@ function ResponsiveAppBar(props) {
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="https://www.studiofrugreenproject.com/lokasi/setupatok" target="_blank"
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                    Jelajah Ensiklopedia 
-                </Button>
-                <Button
-                    onClick={handleCloseNavMenu}
                     href="/donasi"
                     sx={{ my: 2, color: 'white', display: 'block' }}
                 >
