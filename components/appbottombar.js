@@ -22,6 +22,8 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 export default function AppBottomBar () {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
   <>
   <Box>
@@ -45,7 +47,7 @@ export default function AppBottomBar () {
 
         <Item>
             <Typography variant="caption" gutterBottom>
-                © 2022 - 2023 Yayasan Wangsakerta. All rights reserved. Design by <Link href="https://studiofruworks.com">Studiofru</Link>
+                © 2022 - {year} Yayasan Wangsakerta. All rights reserved. Design by <Link href="https://studiofruworks.com">Studiofru</Link>
             </Typography>
         </Item>
       </Stack>

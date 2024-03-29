@@ -25,7 +25,7 @@ return (
     <Stack spacing={2} sx={{borderRadius: 5, m:5}} justifyContent="center" alignItems="center">
 			<ButtonGroup  variant="contained" sx={{borderRadius: 5}} color="secondary" backgroundColor="white" aria-label="medium secondary button group">
 				<Button onClick={previousPage} className="page-number">
-					Terbaru <KeyboardArrowLeftIcon />
+				<KeyboardArrowLeftIcon /> Terbaru 
 				</Button>
 				<Button onClick={nextPage} className="page-number">
 					Terdahulu <KeyboardArrowRightIcon />
