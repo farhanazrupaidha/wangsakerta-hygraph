@@ -58,7 +58,7 @@ function DrawerToggle () {
                     </ListItemButton>
                   </ListItem>
                     <ListItem disablePadding>
-                      <ListItemButton href="https://www.studiofrugreenproject.com/lokasi/setupatok" target="_blank">
+                      <ListItemButton href="https://studiofrugreenproject.com/lokasi/setu-patok" target="_blank">
                         <ListItemText>
                           Jelajah Ensiklopedia
                         </ListItemText>
