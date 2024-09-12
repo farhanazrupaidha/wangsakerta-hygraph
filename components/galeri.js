@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/react-splide/css/sea-green';
 
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -21,110 +24,128 @@ export default function Galeri () {
  <section id="galeri" data-stellar-background-ratio="0.5">
  <Box sx={{m:5}}>
  <Typography variant="h4" sx={{textAlign: 'center', mb:2}}><CollectionsIcon sx={{mr:1, mb:1}} />Galeri</Typography>
-      <div className="embla" ref={emblaRef}>
-      <div className="embla__container">
-        <div className="embla__slide">
-            <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="/images/Wangsakerta - 1.jpg"
-                    alt="Yayasan Wangsakerta"
-                  />
-                </Card>
-        </div>
-        <div className="embla__slide">
-            <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image="/images/Wangsakerta - 2.jpg"
-                    alt="Yayasan Wangsakerta"
-                  />
-                </Card>
-        </div>
-         <div className="embla__slide">
-             <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                   <CardMedia
-                     component="img"
-                     height="140"
-                     image="/images/Wangsakerta - 3.jpg"
-                     alt="Yayasan Wangsakerta"
-                   />
-                 </Card>
-         </div>
-        <div className="embla__slide">
-             <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                   <CardMedia
-                     component="img"
-                     height="140"
-                     image="/images/Wangsakerta - 4.jpg"
-                     alt="Yayasan Wangsakerta"
-                   />
-                 </Card>
-         </div>
-         <div className="embla__slide">
-             <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                   <CardMedia
-                     component="img"
-                     height="140"
-                     image="/images/Wangsakerta - 5.jpg"
-                     alt="Yayasan Wangsakerta"
-                   />
-                 </Card>
-         </div>
-          <div className="embla__slide">
-              <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image="/images/Wangsakerta - 6.jpg"
-                      alt="Yayasan Wangsakerta"
-                    />
-                  </Card>
-          </div>
-        <div className="embla__slide">
-             <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                   <CardMedia
-                     component="img"
-                     height="140"
-                     image="/images/Wangsakerta - 7.jpg"
-                     alt="Yayasan Wangsakerta"
-                   />
-                 </Card>
-         </div>
-         <div className="embla__slide">
-             <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                   <CardMedia
-                     component="img"
-                     height="140"
-                     image="/images/Wangsakerta - 8.jpg"
-                     alt="Yayasan Wangsakerta"
-                   />
-                 </Card>
-         </div>
-          <div className="embla__slide">
-              <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image="/images/Wangsakerta - 9.jpg"
-                      alt="Yayasan Wangsakerta"
-                    />
-                  </Card>
-          </div>
-          <div className="embla__slide">
-              <Card sx={{ maxWidth: 650, m:'auto', mb:5, mt:5, textAlign: 'center' }}>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image="/images/Wangsakerta - 10.jpg"
-                      alt="Yayasan Wangsakerta"
-                    />
-                  </Card>
-          </div>
-      </div>
-      </div>
+ <Splide aria-label="Galeri">
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 9.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>   
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 1.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 2.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 3.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 4.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 5.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 6.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 7.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 8.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>
+  <SplideSlide>
+    <section className="d-share">
+      <Card sx={{ maxWidth: 650, m:'auto', mb:5, textAlign: 'center' }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="/images/Wangsakerta - 10.jpg"
+            alt="Yayasan Wangsakerta"
+          />
+      </Card>
+    </section>
+  </SplideSlide>  
+</Splide>
 </Box>
 </section>
   )

@@ -42,7 +42,7 @@ return (
                     Ngenger merupakan salah satu program yang digagas oleh Yayasan Wangsakerta dalam lingkup pendidikan melalui penyelenggaraan kegiatan belajar mengajar yang umumnya berlangsung selama tiga bulan.
                 </Typography>
                 <Typography variant="body1" gutterBottom>
-                    Hingga bulan Februari 2023 Ngenger Sekolah Alam Wangsakerta telah berhasil menghasilkan tiga angkatan peserta didik yang telah siap untuk turut serta ambil bagian dalam berbagai kegiatan bermasyarakat dalam ruang pedesaan.
+                    Hingga bulan Oktober 2024 Ngenger Sekolah Alam Wangsakerta telah berhasil menghasilkan 5 angkatan peserta didik yang telah siap untuk turut serta ambil bagian dalam berbagai kegiatan bermasyarakat dalam ruang pedesaan.
                 </Typography>
             </Item>
         </Stack>

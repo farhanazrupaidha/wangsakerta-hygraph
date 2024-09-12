@@ -89,8 +89,8 @@ return (
                 </Link>
             </Typography>
             <Typography variant="body1" gutterBottom>
-                <Link href="/produk" underline="hover" color='inherit'>
-                    Produk - Produk
+                <Link href="/ngenger" underline="hover" color='inherit'>
+                    Ngenger - Sekolah Alam
                 </Link>
             </Typography>
         </Item>
