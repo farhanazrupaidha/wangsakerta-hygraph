@@ -15,7 +15,7 @@ import Typography from '@mui/material/Typography';
 export default function Galeri () {
 
   return (
- <Box sx={{mb:10, m:5}}>
+ <Box sx={{mb:10, mt:5}}>
 
 <Typography variant="h5" sx={{m:5, mb:2}}>Angkatan ke-5</Typography>
 <Splide aria-label="Angkatan ke-5">

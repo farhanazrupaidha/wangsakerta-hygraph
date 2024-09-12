@@ -47,7 +47,7 @@ export default function AppBottomBar () {
 
         <Item>
             <Typography variant="caption" gutterBottom>
-                © 2022 - {year} Yayasan Wangsakerta. All rights reserved. Design by <Link href="https://studiofruworks.com">Studiofru</Link>
+                © 2022 - {year} Yayasan Wangsakerta. All rights reserved. Design by <Link href="https://jackplan.com/bio/studiofru">Studiofru</Link>
             </Typography>
         </Item>
       </Stack>

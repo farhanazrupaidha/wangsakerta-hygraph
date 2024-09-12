@@ -57,6 +57,13 @@ function DrawerToggle () {
                       </ListItemText>
                     </ListItemButton>
                   </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemButton href="/ngenger">
+                      <ListItemText>
+                        Ngenger - Sekolah Alam
+                      </ListItemText>
+                    </ListItemButton>
+                  </ListItem>                  
                     <ListItem disablePadding>
                       <ListItemButton href="https://studiofrugreenproject.com/lokasi/setu-patok" target="_blank">
                         <ListItemText>
@@ -73,7 +80,7 @@ function DrawerToggle () {
                   </ListItem>
               </List>
 
-
+              <Button color="inherit" onClick={() => setOpen(false)}>Tutup</Button>
       </Drawer>
     </div>
   );

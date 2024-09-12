@@ -22,7 +22,7 @@ export default function Galeri () {
 
   return (
  <section id="galeri" data-stellar-background-ratio="0.5">
- <Box sx={{m:5}}>
+ <Box sx={{mb:5, mt:5}}>
  <Typography variant="h4" sx={{textAlign: 'center', mb:2}}><CollectionsIcon sx={{mr:1, mb:1}} />Galeri</Typography>
  <Splide aria-label="Galeri">
   <SplideSlide>
