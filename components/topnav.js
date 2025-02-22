@@ -140,7 +140,7 @@ function ResponsiveAppBar(props) {
                 </Button>
                 <Button
                     onClick={handleCloseNavMenu}
-                    href="https://studiofrugreenproject.com/tag/setu-patok/" target="_blank"
+                    href="https://www.studiofrugreenproject.com" target="_blank"
                     sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                     Jelajah Ensiklopedia 
