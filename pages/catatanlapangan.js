@@ -15,7 +15,8 @@ const Intro = dynamic(() => import('components/intro'), {
 });
 const HeroPost = dynamic(() => import('components/hero-post'));
 
-import Divider from '@mui/material/Divider';
+const endpoint = process.env.GRAPHCMS_PROJECT_API;
+
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -33,7 +34,7 @@ export default function Index({ posts, preview }) {
 	useEffect(() => {
 		const fetchBlogPosts = async () => {
 			const { posts, postsConnection } = await request(
-				'https://api-ap-southeast-2.hygraph.com/v2/clknbgxdh0r7u01t62h320963/master',
+				endpoint,
 				`
 			{
 				posts (orderBy: date_DESC, first: ${postsPerPage}, skip: ${
