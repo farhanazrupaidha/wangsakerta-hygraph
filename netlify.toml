@@ -1,0 +1,6 @@
+[build.environment]
+  # GRAPHCMS_PREVIEW_SECRET is a short, word-like value that can match ordinary
+  # text in the generated build output, causing false positives in secrets
+  # scanning. It is not hardcoded anywhere in the repository. Only this key is
+  # omitted; all other secrets (including GRAPHCMS_DEV_AUTH_TOKEN) are still scanned.
+  SECRETS_SCAN_OMIT_KEYS = "GRAPHCMS_PREVIEW_SECRET"
