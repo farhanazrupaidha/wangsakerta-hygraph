@@ -17,6 +17,7 @@ export default function CoverImage({ title, url, slug }) {
       priority={true}
       layout="responsive"
       placeholder='blur'
+      unoptimized
     />
   )
 
